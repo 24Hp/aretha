@@ -63,7 +63,7 @@ public class PeternakA {
 		this.position = position;
 	}
 
-	@OneToOne(cascade = CascadeType.MERGE)
+	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "parent_id")
 	public PeternakB getKeluarga() {
 		return keluarga;

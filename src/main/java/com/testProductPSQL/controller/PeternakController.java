@@ -32,4 +32,14 @@ public class PeternakController {
 	public void addPeternak(@RequestBody PeternakA peternak) {
 		peternakService.addPeternak(peternak);
 	}
+	
+	@RequestMapping(method = RequestMethod.PUT, value = "/peternak/{id}")
+	public void editPeternak(@RequestBody PeternakA peternak,@PathVariable long id) {
+		peternakService.editPeternak(peternak, id);
+	}
+	
+	@RequestMapping(method = RequestMethod.DELETE, value = "peternak/{id}")
+	public void deletePeternak(@PathVariable long id) {
+		peternakService.deletePeternak(id);
+	}
 }
