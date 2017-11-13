@@ -18,8 +18,24 @@ public class PeternakService {
 	
 	public List<PeternakA> getAllPeternak() {
 		List<PeternakA> peternak = new ArrayList<>();
-		peternakRepo.findByPosition("Keluarga")
+		peternakRepo.findByPosition("Peternak")
 		.forEach(peternak::add);
 		return peternak;
+	}
+	
+	public PeternakA getOnePeternak(long id) {
+		return peternakRepo.findOne(id);
+	}
+	
+	public void addPeternak(PeternakA peternak) {
+		peternakRepo.save(peternak);
+	}
+	
+	public void editPeternak(PeternakA peternak, long id) {
+		peternakRepo.save(peternak);
+	}
+	
+	public void deletePeternak(long id) {
+		peternakRepo.delete(id);
 	}
 }

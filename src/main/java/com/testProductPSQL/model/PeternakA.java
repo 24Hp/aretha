@@ -35,7 +35,7 @@ public class PeternakA {
 	
 	@Id
 	@Column(name = "user_id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public long getId() {
 		return id;
 	}
@@ -63,7 +63,7 @@ public class PeternakA {
 		this.position = position;
 	}
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "parent_id")
 	public PeternakB getKeluarga() {
 		return keluarga;

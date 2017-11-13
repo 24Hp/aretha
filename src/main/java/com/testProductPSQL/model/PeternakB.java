@@ -24,7 +24,7 @@ public class PeternakB {
 	private String work;
 	private String ktp_number;
 	private String position;
-	private long parent_id;
+//	private long parent_id;
 	
 //	private PeternakA keluarga;
 
@@ -104,12 +104,12 @@ public class PeternakB {
 		this.ktp_number = ktp_number;
 	}
 	
-	public long getParent_id() {
-		return parent_id;
-	}
-	public void setParent_id(long parent_id) {
-		this.parent_id = parent_id;
-	}
+//	public long getParent_id() {
+//		return parent_id;
+//	}
+//	public void setParent_id(long parent_id) {
+//		this.parent_id = parent_id;
+//	}
 	
 //	@OneToOne(cascade = CascadeType.ALL)
 //	@JoinColumn(name = "user_id")
